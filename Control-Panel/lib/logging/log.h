@@ -37,14 +37,14 @@
 #undef log_e
 #undef log_e_f
 #define log_e(message) do{ __LOG(ERROR_LOG_LABEL); __LOG_N(message);} while(0);
-#define log_e_f(message, ...) do{ __LOG(ERROR_LOG_LABEL); __LOG(message, ##__VA_ARGS__);} while(0)
+#define log_e_f(message, ...) do{ __LOG(ERROR_LOG_LABEL); __LOG_F(message, ##__VA_ARGS__);} while(0)
 #endif
 
 #if LOGGING_LEVEL > 1
 #undef log_i
 #undef log_i_f
 #define log_i(message) do{ __LOG(INFO_LOG_LABLE); __LOG_N(message);} while(0);
-#define log_i_f(message, ...) do{__LOG(INFO_LOG_LABLE); __LOG(message, ##__VA_ARGS__);} while(0)
+#define log_i_f(message, ...) do{__LOG(INFO_LOG_LABLE); __LOG_F(message, ##__VA_ARGS__);} while(0)
 #endif
 
 #if LOGGING_LEVEL > 2
