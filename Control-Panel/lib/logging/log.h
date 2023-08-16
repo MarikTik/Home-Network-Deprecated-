@@ -17,7 +17,7 @@
 #define ERROR_LOG_LABEL "[ERROR]: "
 #define INFO_LOG_LABLE "[INFO]: "
 #define DEBUG_LOG_LABLE "[DEBUG]: "
-#define VERBOSE_LOG_LABLE "[VERBOSE] "
+#define VERBOSE_LOG_LABLE "[VERBOSE]: "
 
 #define __LOG(str) Serial.print(FLASH_PROCESS(str))
 #define __LOG_N(str) Serial.println(FLASH_PROCESS(str))
@@ -50,14 +50,14 @@
 #if LOGGING_LEVEL > 2
 #undef log_d
 #undef log_d_f
-#define log_d(message) do{ __LOG(DEBUG_LOG_LABLE); __LOG_N(messssage);} while(0);
+#define log_d(message) do{ __LOG(DEBUG_LOG_LABLE); __LOG_N(message);} while(0);
 #define log_d_f(message, ...) do{ __LOG(DEBUG_LOG_LABLE); __LOG_F(message, ##__VA_ARGS__);} while(0)
 #endif
 
 #if LOGGING_LEVEL > 3
 #undef log_v
 #undef log_v_f
-#define log_v(message) do{ __LOG(VERBOSE_LOG_LABLE); __LOG_N(messssage);} while(0);
+#define log_v(message) do{ __LOG(VERBOSE_LOG_LABLE); __LOG_N(message);} while(0);
 #define log_v_f(message, ...) do{ __LOG(VERBOSE_LOG_LABLE); __LOG_F(message, ##__VA_ARGS__);} while(0)
 #endif
  
