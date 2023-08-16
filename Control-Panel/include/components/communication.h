@@ -1,7 +1,7 @@
 #ifndef COMMUNICATION_H_
 #define COMMUNICATION_H_
 
-//for using wifi related software
+//for using wifi related software and serial debugging
 
 
 void communication_begin();
