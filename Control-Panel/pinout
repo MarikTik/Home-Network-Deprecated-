@@ -3,7 +3,7 @@ ILI9341     |       ESP
 VCC         |       3.3V
 GND         |       G
 CS          |       D8          [GPIO15]
-RESET       |       3.3V
+RESET       |       D0          [GPIO16]
 DC          |       D4          [GPIO2]
 SDI<MOSI>   |       D7          [GPIO13]
 SCK         |       D5          [GPIO14]
@@ -14,3 +14,4 @@ T_CS        |       D2          [GPIO4]
 T_DIN       |       D7          [GPIO13]
 T_DO        |       D6          [GPIO12]
 T_IRQ       |       D1          [GPIO5]
+
